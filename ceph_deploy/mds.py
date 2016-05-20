@@ -35,6 +35,7 @@ def create_mds(distro, name, cluster, init):
         )
 
     conn.remote_module.safe_mkdir(path)
+    #Add William , os.system("mkdir -p %s" %path)
 
     bootstrap_keyring = '/var/lib/ceph/bootstrap-mds/{cluster}.keyring'.format(
         cluster=cluster
